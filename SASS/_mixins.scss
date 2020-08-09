@@ -54,3 +54,37 @@
   -webkit-background-clip: text;
   background-attachment: fixed;
 }
+
+
+// Resposive
+@mixin Tablet_L {
+  @media screen and (max-width: $tablet-L){
+    @content;
+  }
+}
+
+@mixin Tablet {
+  @media screen and (max-width: $tablet){
+    @content;
+  }
+}
+
+@mixin Mobile {
+  @media screen and (max-width: $phone){
+    @content;
+  }
+}
+
+// Color Function
+@function color($color){
+  @if(lightness($color) >75){
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+@mixin BG_color($color) {
+  background-color: $color;
+  color: color($color)
+}

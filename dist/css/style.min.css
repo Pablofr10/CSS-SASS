@@ -50,8 +50,9 @@ nav ul li a:hover {
 }
 
 .menu-nav-right {
-  color: var(--sec-c);
   font-weight: 600;
+  background-color: #220000;
+  color: white;
 }
 
 .container {
@@ -192,4 +193,99 @@ footer .social a:nth-child(3):hover {
 
 footer .social a:last-child:hover {
   color: #df0b27;
+}
+
+/* Resposive */
+@media screen and (max-width: 768px) {
+  .right h4 {
+    font-size: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer a {
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .right h1 {
+    font-size: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @keyframes right {
+    0% {
+      background-position: -1000px;
+      left: 100%;
+      opacity: 0;
+    }
+    100% {
+      background-position: 0px;
+      left: 20%;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav ul {
+    justify-content: space-around;
+  }
+  nav ul li {
+    font-size: 1.5rem;
+  }
+  .left h1 {
+    position: relative;
+    font-size: 2rem;
+    width: 100%;
+  }
+  .right h1 {
+    font-size: 3rem;
+    top: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+  }
+  footer .social a {
+    padding: 1rem 0;
+  }
+  footer .copy {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    padding-left: 0;
+    font-size: 1rem;
+  }
+  @keyframes right {
+    0% {
+      background-position: -1000px;
+      left: 100%;
+      opacity: 0;
+    }
+    100% {
+      background-position: 0px;
+      left: -45%;
+      opacity: 1;
+    }
+  }
+  @keyframes left {
+    0% {
+      opacity: 0;
+      top: 20%;
+    }
+    100% {
+      opacity: 1;
+      top: 20%;
+      left: 100%;
+    }
+  }
 }
