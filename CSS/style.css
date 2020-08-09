@@ -11,6 +11,7 @@
   --face-c: #41b9ff;
   --twit-c: #0d73ad;
   --yt-c: #df0b27;
+  --tablet: 768px;
 }
 
 body {
@@ -226,7 +227,7 @@ footer a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: var(--tablet)) {
   .right h1 {
     font-size: 7rem;
     display: flex;

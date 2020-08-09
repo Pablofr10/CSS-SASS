@@ -1,0 +1,38 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: var(--prim-c);
+  @include Flex(row, center);
+  justify-content: space-between;
+  .copy {
+    color: var(--prime-c);
+    padding-left: 2rem;
+    font-size: 1.5rem;
+  }
+  .social {
+    padding-right: 2rem;
+    @include transition;
+    a {
+      padding: 0 0.2rem;
+      transition: 0.9s ease;
+      &:hover {
+        @include hover;
+      }
+      &:first-child:hover {
+        color: $insta-c;
+      }
+      &:nth-child(2):hover {
+        color: $face-c;
+      }
+      &:nth-child(3):hover {
+        color: $twit-c;
+      }
+      &:last-child:hover {
+        color: $yt-c;
+      }
+      
+    }    
+  }  
+}
+
